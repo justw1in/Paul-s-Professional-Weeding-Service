@@ -27,13 +27,50 @@
             text-decoration: underline;
             text-decoration-thickness: 2px;
         }
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 999;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            text-align: center;
+        }
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            margin-top: 5%;
+        }
+        .lightbox:target {
+            display: block;
+        }
+        .review-header {
+            background-color: #f3f4f6;
+            border-radius: 0.75rem;
+            padding: 1rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            position: relative;
+        }
+        .review-header:after {
+            content: "↓";
+            display: block;
+            font-size: 2rem;
+            color: #6b7280;
+            margin-top: 0.5rem;
+        }
     </style>
 </head>
 <body class="min-h-screen flex flex-col">
 
     <header class="bg-black text-white shadow-sm py-4 px-6 md:px-12 rounded-b-xl border-b border-gray-800">
         <div class="container mx-auto flex flex-col items-center">
-            <h1 class="text-3xl md:text-5xl font-bold text-center mb-6 title-underline">Paul's Professional Weeding Service 🌿</h1>
+            <div class="text-center mb-2">
+                <a href="#home" class="text-3xl md:text-5xl font-bold title-underline hover:text-gray-300 transition-colors duration-200">Paul's Professional Weeding Service</a>
+                <p class="text-xl mt-2">An Ann Arbor Landscaping Company</p>
+            </div>
 
             <nav class="w-full">
                 <ul class="flex flex-wrap justify-center gap-x-6 gap-y-3 text-xl">
@@ -53,6 +90,7 @@
             <div class="max-w-4xl mx-auto">
                 <div class="text-center mb-12 p-6 bg-gray-50 rounded-xl shadow-md border border-gray-200">
                     <h2 class="text-2xl md:text-3xl font-semibold mb-3">Quick Contact Info 📞</h2>
+                    <p class="text-xl mb-4">You can call, text, or email us! We respond quickly to text messages.</p>
                     <p class="text-xl md:text-2xl font-medium mb-2">
                         <a href="tel:734-474-8230" class="text-black hover:text-gray-700 transition-colors duration-200">📱 734-474-8230</a>
                     </p>
@@ -106,8 +144,8 @@
 
                 <div class="text-center text-gray-600 mt-16 pt-8 border-t border-gray-200 bg-gray-50 rounded-t-xl py-6">
                     <h3 class="text-2xl font-semibold mb-4">Our Service Area 📍</h3>
-                    <p class="mb-4">[Map of our area will go here]</p>
-                    <p class="text-sm mb-2">Disclaimer: Paul's Professional Weeding Service specializes in softscape landscaping services. We do not offer mowing or hardscape services.</p>
+                    <img src="https://i.imgur.com/LV2Jz2R.jpeg" alt="Service area map" class="mx-auto w-full max-w-2xl h-auto rounded-lg shadow-md border border-gray-200">
+                    <p class="text-sm mb-2 mt-4">Disclaimer: Paul's Professional Weeding Service specializes in softscape landscaping services. We do not offer mowing or hardscape services.</p>
                     <p class="text-sm">&copy; 2025 Paul's Professional Weeding Service. All rights reserved.</p>
                 </div>
             </div>
@@ -116,175 +154,89 @@
         <section id="our-work" class="page-section">
             <div class="max-w-6xl mx-auto py-8">
                 <h2 class="text-4xl font-bold mb-10 text-center">See Our Past Work 📸</h2>
-                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                    <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
-                        <img src="https://i.imgur.com/eOlZyYl.jpeg" alt="Landscaping project example" class="w-full h-48 object-cover">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <a href="#img1" class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
+                        <img src="https://i.imgur.com/eOlZyYl.jpeg" alt="Landscaping project example" class="w-full h-64 object-cover">
                         <div class="p-4 text-lg">🌿 Garden bed weeding and cleanup.</div>
-                    </div>
-                    <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
-                        <img src="https://i.imgur.com/FV3i5tW.jpeg" alt="Landscaping project example" class="w-full h-48 object-cover">
+                    </a>
+                    <a href="#img2" class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
+                        <img src="https://i.imgur.com/FV3i5tW.jpeg" alt="Landscaping project example" class="w-full h-64 object-cover">
                         <div class="p-4 text-lg">🔄 Before and after weeding.</div>
-                    </div>
-                    <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
-                        <img src="https://i.imgur.com/bz43V1q.jpeg" alt="Landscaping project example" class="w-full h-48 object-cover">
+                    </a>
+                    <a href="#img3" class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
+                        <img src="https://i.imgur.com/bz43V1q.jpeg" alt="Landscaping project example" class="w-full h-64 object-cover">
                         <div class="p-4 text-lg">✂️ Clearing overgrown areas.</div>
-                    </div>
-                    <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
-                        <img src="https://i.imgur.com/ACi93lj.jpeg" alt="Landscaping project example" class="w-full h-48 object-cover">
+                    </a>
+                    <a href="#img4" class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
+                        <img src="https://i.imgur.com/ACi93lj.jpeg" alt="Landscaping project example" class="w-full h-64 object-cover">
                         <div class="p-4 text-lg">🌱 Freshly weeded garden.</div>
-                    </div>
-                    <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
-                        <img src="https://i.imgur.com/J8ausUo.jpeg" alt="Landscaping project example" class="w-full h-48 object-cover">
+                    </a>
+                    <a href="#img5" class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
+                        <img src="https://i.imgur.com/J8ausUo.jpeg" alt="Landscaping project example" class="w-full h-64 object-cover">
                         <div class="p-4 text-lg">🔍 Detailed weeding work.</div>
-                    </div>
-                    <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
-                        <img src="https://i.imgur.com/1O4YaOg.jpeg" alt="Landscaping project example" class="w-full h-48 object-cover">
+                    </a>
+                    <a href="#img6" class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
+                        <img src="https://i.imgur.com/1O4YaOg.jpeg" alt="Landscaping project example" class="w-full h-64 object-cover">
                         <div class="p-4 text-lg">✅ A completed project.</div>
-                    </div>
-                    <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
-                        <img src="https://i.imgur.com/9gsDxch.jpeg" alt="Landscaping project example" class="w-full h-48 object-cover">
+                    </a>
+                    <a href="#img7" class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
+                        <img src="https://i.imgur.com/9gsDxch.jpeg" alt="Landscaping project example" class="w-full h-64 object-cover">
                         <div class="p-4 text-lg">🏡 Yard transformation.</div>
-                    </div>
-                    <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
-                        <img src="https://i.imgur.com/5jU7nuo.jpeg" alt="Landscaping project example" class="w-full h-48 object-cover">
+                    </a>
+                    <a href="#img8" class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
+                        <img src="https://i.imgur.com/5jU7nuo.jpeg" alt="Landscaping project example" class="w-full h-64 object-cover">
                         <div class="p-4 text-lg">🧹 Cleaned and prepared garden bed.</div>
-                    </div>
-                    <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
-                        <img src="https://i.imgur.com/TBZ9fru.jpeg" alt="Landscaping project example" class="w-full h-48 object-cover">
+                    </a>
+                    <a href="#img9" class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
+                        <img src="https://i.imgur.com/TBZ9fru.jpeg" alt="Landscaping project example" class="w-full h-64 object-cover">
                         <div class="p-4 text-lg">👌 Precise weeding.</div>
-                    </div>
-                    <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
-                        <img src="https://i.imgur.com/FUfOFr9.jpeg" alt="Landscaping project example" class="w-full h-48 object-cover">
+                    </a>
+                    <a href="#img10" class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
+                        <img src="https://i.imgur.com/FUfOFr9.jpeg" alt="Landscaping project example" class="w-full h-64 object-cover">
                         <div class="p-4 text-lg">✨ Another successful cleanup.</div>
-                    </div>
-                    <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
-                        <img src="https://i.imgur.com/AzHxSaU.jpeg" alt="Landscaping project example" class="w-full h-48 object-cover">
-                        <div class="p-4 text-lg">🌼 Garden maintenance.</div>
-                    </div>
-                    <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
-                        <img src="https://i.imgur.com/ZYK7dXA.jpeg" alt="Landscaping project example" class="w-full h-48 object-cover">
-                        <div class="p-4 text-lg">🧹 Overgrown area cleared.</div>
-                    </div>
-                    <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
-                        <img src="https://i.imgur.com/vTNwIck.jpeg" alt="Landscaping project example" class="w-full h-48 object-cover">
-                        <div class="p-4 text-lg">🏆 Final result of weeding.</div>
-                    </div>
-                    <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
-                        <img src="https://i.imgur.com/LBbJAA2.png" alt="Landscaping project example" class="w-full h-48 object-cover">
-                        <div class="p-4 text-lg">🛤️ Pathway edging and weeding.</div>
-                    </div>
-                    <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
-                        <img src="https://i.imgur.com/NVn6LvW.png" alt="Landscaping project example" class="w-full h-48 object-cover">
-                        <div class="p-4 text-lg">🌱 Lawn and garden care.</div>
-                    </div>
-                    <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
-                        <img src="https://i.imgur.com/L2DrbXh.png" alt="Landscaping project example" class="w-full h-48 object-cover">
-                        <div class="p-4 text-lg">💐 Beautifully maintained garden.</div>
-                    </div>
-                    <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
-                        <img src="https://i.imgur.com/vTRJ1T8.png" alt="Landscaping project example" class="w-full h-48 object-cover">
-                        <div class="p-4 text-lg">🧼 Tidy and weed-free.</div>
-                    </div>
-                    <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
-                        <img src="https://i.imgur.com/JXV9ljM.png" alt="Landscaping project example" class="w-full h-48 object-cover">
-                        <div class="p-4 text-lg">🌿 Large area cleanup.</div>
-                    </div>
-                    <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
-                        <img src="https://i.imgur.com/oZSQZQr.png" alt="Landscaping project example" class="w-full h-48 object-cover">
-                        <div class="p-4 text-lg">🪴 Garden bed after service.</div>
-                    </div>
-                    <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
-                        <img src="https://i.imgur.com/J9JFHNQ.jpeg" alt="Landscaping project example" class="w-full h-48 object-cover">
-                        <div class="p-4 text-lg">✂️ Clean edges and surfaces.</div>
-                    </div>
-                    <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
-                        <img src="https://i.imgur.com/IAUdEn3.png" alt="Landscaping project example" class="w-full h-48 object-cover">
-                        <div class="p-4 text-lg">🏆 Results of our hard work.</div>
-                    </div>
-                    <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
-                        <img src="https://i.imgur.com/5IE8aAk.jpeg" alt="Landscaping project example" class="w-full h-48 object-cover">
-                        <div class="p-4 text-lg">👌 Impeccable weeding service.</div>
-                    </div>
-                    <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
-                        <img src="https://i.imgur.com/37mcEct.jpeg" alt="Landscaping project example" class="w-full h-48 object-cover">
-                        <div class="p-4 text-lg">😊 Happy plants, no weeds.</div>
-                    </div>
-                    <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
-                        <img src="https://i.imgur.com/w9WAhXM.jpeg" alt="Landscaping project example" class="w-full h-48 object-cover">
-                        <div class="p-4 text-lg">👷 Our work in progress.</div>
-                    </div>
-                    <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
-                        <img src="https://i.imgur.com/6WCMzIX.png" alt="Landscaping project example" class="w-full h-48 object-cover">
-                        <div class="p-4 text-lg">🔍 Attention to detail.</div>
-                    </div>
-                    <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
-                        <img src="https://i.imgur.com/xDOag9e.png" alt="Landscaping project example" class="w-full h-48 object-cover">
-                        <div class="p-4 text-lg">🏆 Landscaping excellence.</div>
-                    </div>
-                    <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
-                        <img src="https://i.imgur.com/Y0eK9hF.png" alt="Landscaping project example" class="w-full h-48 object-cover">
-                        <div class="p-4 text-lg">🌿 Fresh and clean garden.</div>
-                    </div>
-                    <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
-                        <img src="https://i.imgur.com/Xo1lyeM.png" alt="Landscaping project example" class="w-full h-48 object-cover">
-                        <div class="p-4 text-lg">🌱 Weeding around delicate plants.</div>
-                    </div>
-                    <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
-                        <img src="https://i.imgur.com/LGcgpjk.png" alt="Landscaping project example" class="w-full h-48 object-cover">
-                        <div class="p-4 text-lg">👔 Professional results.</div>
-                    </div>
-                    <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
-                        <img src="https://i.imgur.com/eVIXVyP.png" alt="Landscaping project example" class="w-full h-48 object-cover">
-                        <div class="p-4 text-lg">👍 Another job well done.</div>
-                    </div>
-                    <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
-                        <img src="https://i.imgur.com/NZewfto.jpeg" alt="Landscaping project example" class="w-full h-48 object-cover">
-                        <div class="p-4 text-lg">🔄 Garden bed restoration.</div>
-                    </div>
-                    <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
-                        <img src="https://i.imgur.com/ZoDE3hM.png" alt="Landscaping project example" class="w-full h-48 object-cover">
-                        <div class="p-4 text-lg">👨‍🌾 Expert weeding services.</div>
-                    </div>
-                    <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
-                        <img src="https://i.imgur.com/QdZJxd7.png" alt="Landscaping project example" class="w-full h-48 object-cover">
-                        <div class="p-4 text-lg">🔄 Before and after our service.</div>
-                    </div>
-                    <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
-                        <img src="https://i.imgur.com/AL7VG7F.jpeg" alt="Landscaping project example" class="w-full h-48 object-cover">
-                        <div class="p-4 text-lg">🧹 Clear and tidy results.</div>
-                    </div>
-                    <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
-                        <img src="https://i.imgur.com/qI8qnE2.jpeg" alt="Landscaping project example" class="w-full h-48 object-cover">
-                        <div class="p-4 text-lg">🏠 Weeding around structures.</div>
-                    </div>
-                    <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
-                        <img src="https://i.imgur.com/oul6Iyv.jpeg" alt="Landscaping project example" class="w-full h-48 object-cover">
-                        <div class="p-4 text-lg">✨ Cleaned up and beautiful.</div>
-                    </div>
-                    <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
-                        <img src="https://i.imgur.com/uCoATW5.jpeg" alt="Landscaping project example" class="w-full h-48 object-cover">
-                        <div class="p-4 text-lg">🌿 From overgrown to immaculate.</div>
-                    </div>
-                    <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
-                        <img src="https://i.imgur.com/XBXMVzf.jpeg" alt="Landscaping project example" class="w-full h-48 object-cover">
-                        <div class="p-4 text-lg">👨‍👩‍👧‍👦 Our team's quality work.</div>
-                    </div>
-                    <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
-                        <img src="https://i.imgur.com/saOAkci.jpeg" alt="Landscaping project example" class="w-full h-48 object-cover">
-                        <div class="p-4 text-lg">😊 A satisfied customer's yard.</div>
-                    </div>
-                    <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
-                        <img src="https://i.imgur.com/5N2lGeo.jpeg" alt="Landscaping project example" class="w-full h-48 object-cover">
-                        <div class="p-4 text-lg">🌿 Large scale weeding.</div>
-                    </div>
-                    <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
-                        <img src="https://i.imgur.com/h127h3W.jpeg" alt="Landscaping project example" class="w-full h-48 object-cover">
-                        <div class="p-4 text-lg">🏡 Maintaining curb appeal.</div>
-                    </div>
-                    <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
-                        <img src="https://i.imgur.com/wpJZl34.jpeg" alt="Landscaping project example" class="w-full h-48 object-cover">
-                        <div class="p-4 text-lg">✅ Finished weeding project.</div>
-                    </div>
+                    </a>
+                </div>
+
+                <!-- Lightbox images -->
+                <div id="img1" class="lightbox">
+                    <a href="#our-work" class="absolute top-4 right-4 text-white text-4xl">&times;</a>
+                    <img src="https://i.imgur.com/eOlZyYl.jpeg" alt="Full size image">
+                </div>
+                <div id="img2" class="lightbox">
+                    <a href="#our-work" class="absolute top-4 right-4 text-white text-4xl">&times;</a>
+                    <img src="https://i.imgur.com/FV3i5tW.jpeg" alt="Full size image">
+                </div>
+                <div id="img3" class="lightbox">
+                    <a href="#our-work" class="absolute top-4 right-4 text-white text-4xl">&times;</a>
+                    <img src="https://i.imgur.com/bz43V1q.jpeg" alt="Full size image">
+                </div>
+                <div id="img4" class="lightbox">
+                    <a href="#our-work" class="absolute top-4 right-4 text-white text-4xl">&times;</a>
+                    <img src="https://i.imgur.com/ACi93lj.jpeg" alt="Full size image">
+                </div>
+                <div id="img5" class="lightbox">
+                    <a href="#our-work" class="absolute top-4 right-4 text-white text-4xl">&times;</a>
+                    <img src="https://i.imgur.com/J8ausUo.jpeg" alt="Full size image">
+                </div>
+                <div id="img6" class="lightbox">
+                    <a href="#our-work" class="absolute top-4 right-4 text-white text-4xl">&times;</a>
+                    <img src="https://i.imgur.com/1O4YaOg.jpeg" alt="Full size image">
+                </div>
+                <div id="img7" class="lightbox">
+                    <a href="#our-work" class="absolute top-4 right-4 text-white text-4xl">&times;</a>
+                    <img src="https://i.imgur.com/9gsDxch.jpeg" alt="Full size image">
+                </div>
+                <div id="img8" class="lightbox">
+                    <a href="#our-work" class="absolute top-4 right-4 text-white text-4xl">&times;</a>
+                    <img src="https://i.imgur.com/5jU7nuo.jpeg" alt="Full size image">
+                </div>
+                <div id="img9" class="lightbox">
+                    <a href="#our-work" class="absolute top-4 right-4 text-white text-4xl">&times;</a>
+                    <img src="https://i.imgur.com/TBZ9fru.jpeg" alt="Full size image">
+                </div>
+                <div id="img10" class="lightbox">
+                    <a href="#our-work" class="absolute top-4 right-4 text-white text-4xl">&times;</a>
+                    <img src="https://i.imgur.com/FUfOFr9.jpeg" alt="Full size image">
                 </div>
             </div>
         </section>
@@ -292,12 +244,14 @@
         <section id="reviews" class="page-section">
             <div class="max-w-4xl mx-auto py-8">
                 <h2 class="text-4xl font-bold mb-10 text-center">Customer Reviews ⭐</h2>
-                <p class="text-center text-xl mb-8">
-                    CHECK OUT OUR REVIEWS ON
-                    <a href="https://bit.ly/32Ggy5z" target="_blank" class="text-black hover:underline font-semibold">THUMBTACK 👍</a>,
-                    <a href="https://www.yelp.com/biz/pauls-professional-weeding-service-ann-arbor" target="_blank" class="text-black hover:underline font-semibold">YELP 🌟</a>, AND
-                    <a href="https://bit.ly/2GtFeVU" target="_blank" class="text-black hover:underline font-semibold">GOOGLE 🌐</a>.
-                </p>
+                <div class="review-header">
+                    <p class="text-xl">
+                        Check out our reviews on
+                        <a href="https://bit.ly/32Ggy5z" target="_blank" class="text-black hover:underline font-semibold">Thumbtack 👍</a>,
+                        <a href="https://www.yelp.com/biz/pauls-professional-weeding-service-ann-arbor" target="_blank" class="text-black hover:underline font-semibold">Yelp 🌟</a>, and
+                        <a href="https://bit.ly/2GtFeVU" target="_blank" class="text-black hover:underline font-semibold">Google 🌐</a>.
+                    </p>
+                </div>
                 <div class="grid grid-cols-1 md:grid-cols-1 gap-8">
                     <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 p-6">
                         <p class="text-xl italic mb-4">"Paul and the team have been great. Everything was done when and for how much we had discussed, and my yard looks awesome. They did a large landscaping job for me and have continued to come out bi-weekly for maintenance and mowing. I wish I'd found them sooner. So impressed!"</p>
@@ -342,9 +296,33 @@
                         <a href="#" class="text-black font-medium hover:underline">📖 Read More</a>
                     </div>
 
+                    <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 p-6">
+                        <h3 class="text-2xl font-semibold mb-3">Mulching Magic: How Proper Mulching Can Transform Your Garden 🌿</h3>
+                        <p class="text-lg text-gray-600 mb-4">Published: June 25, 2025</p>
+                        <p class="text-gray-700 mb-4">
+                            Mulching is often overlooked as a simple finishing touch, but when done correctly, it can dramatically improve the health and appearance of your garden. A proper 2-3 inch layer of organic mulch helps retain soil moisture, regulate temperature, suppress weeds, and gradually improve soil quality as it decomposes. Different plants benefit from different types of mulch - wood chips for trees and shrubs, straw for vegetable gardens, and pine needles for acid-loving plants.
+                        </p>
+                        <p class="text-gray-700 mb-4">
+                            Timing is also crucial. Applying mulch too early in spring can slow soil warming, while applying too late may not provide adequate weed suppression. The "volcano mulching" technique (piling mulch against tree trunks) should be avoided as it can lead to rot and pest problems. Instead, create a donut shape around trees, keeping mulch a few inches away from the trunk. With proper mulching techniques, you'll reduce maintenance while creating optimal growing conditions for your plants.
+                        </p>
+                        <a href="#" class="text-black font-medium hover:underline">📖 Read More</a>
+                    </div>
+
+                    <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 p-6">
+                        <h3 class="text-2xl font-semibold mb-3">Seasonal Garden Preparation: A Month-by-Month Guide for Michigan Gardeners 🗓️</h3>
+                        <p class="text-lg text-gray-600 mb-4">Published: June 12, 2025</p>
+                        <p class="text-gray-700 mb-4">
+                            Michigan's unique climate presents both opportunities and challenges for gardeners. Early spring (March-April) is ideal for pruning most trees and shrubs before bud break, while late spring (May) is perfect for dividing perennials and planting cool-season vegetables. Summer brings the need for consistent watering and pest monitoring, with July being ideal for deadheading flowers to encourage more blooms.
+                        </p>
+                        <p class="text-gray-700 mb-4">
+                            As fall approaches (September-October), focus shifts to planting spring bulbs, aerating lawns, and applying winter mulch after the ground freezes. Winter is the time for planning next year's garden, ordering seeds, and maintaining tools. Each season also has its ideal cleanup tasks - removing winter debris in spring, managing weeds in summer, clearing leaves in fall, and protecting sensitive plants in winter. By following this seasonal rhythm, your garden will thrive year after year with minimal stress and maximum enjoyment.
+                        </p>
+                        <a href="#" class="text-black font-medium hover:underline">📖 Read More</a>
+                    </div>
+
                     <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 p-6 text-center text-gray-500 italic">
                         <h3 class="text-2xl font-semibold mb-2">More insightful articles coming soon! ✨</h3>
-                        <p class="text-lg">Stay tuned for tips on mulching, trimming, seasonal clean-ups, and more.</p>
+                        <p class="text-lg">Stay tuned for tips on edging, seasonal clean-ups, and more.</p>
                     </div>
                 </div>
             </div>

@@ -5,41 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Paul's Professional Weeding Service - Local Landscaping Services</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        /* Custom styles for the Inter font and base colors */
+        /* Custom styles with Apple-like font */
         body {
-            font-family: 'Inter', sans-serif;
-            background-color: #FFFFFF; /* White background */
-            color: #1A1A1A; /* Dark gray/black text */
+            font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #FFFFFF;
+            color: #000000; /* Pure black text */
         }
-        /* Style for active navigation link */
         .nav-link.active {
-            font-weight: 600; /* Semi-bold for active link */
-            border-bottom: 2px solid #FFFFFF; /* Underline for active link, changed to white for dark header */
+            font-weight: 600;
+            border-bottom: 2px solid #FFFFFF;
         }
-        /* Hide sections by default, show only the active one */
         .page-section {
             display: none;
         }
         .page-section.active {
             display: block;
         }
+        .title-underline {
+            text-decoration: underline;
+            text-decoration-thickness: 2px;
+        }
     </style>
 </head>
 <body class="min-h-screen flex flex-col">
 
-    <header class="bg-gray-900 text-white shadow-sm py-4 px-6 md:px-12 rounded-b-xl border-b border-gray-700">
-        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
-            <h1 class="text-3xl md:text-4xl font-bold text-center md:text-left mb-4 md:mb-0">Paul's Professional Weeding Service</h1>
+    <header class="bg-black text-white shadow-sm py-4 px-6 md:px-12 rounded-b-xl border-b border-gray-800">
+        <div class="container mx-auto flex flex-col items-center">
+            <h1 class="text-3xl md:text-5xl font-bold text-center mb-6 title-underline">Paul's Professional Weeding Service 🌿</h1>
 
-            <nav>
-                <ul class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-lg">
-                    <li><a href="#home" class="nav-link active hover:text-gray-300 transition-colors duration-200" data-target="home">Home</a></li>
-                    <li><a href="#our-work" class="nav-link hover:text-gray-300 transition-colors duration-200" data-target="our-work">Our Work</a></li>
-                    <li><a href="#reviews" class="nav-link hover:text-gray-300 transition-colors duration-200" data-target="reviews">Reviews</a></li>
-                    <li><a href="#blog" class="nav-link hover:text-gray-300 transition-colors duration-200" data-target="blog">Blog</a></li>
-                    <li><a href="#submit-form" class="nav-link hover:text-gray-300 transition-colors duration-200" data-target="submit-form">Submit a Form</a></li>
+            <nav class="w-full">
+                <ul class="flex flex-wrap justify-center gap-x-6 gap-y-3 text-xl">
+                    <li><a href="#home" class="nav-link active hover:text-gray-300 transition-colors duration-200" data-target="home">🏠 Home</a></li>
+                    <li><a href="#our-work" class="nav-link hover:text-gray-300 transition-colors duration-200" data-target="our-work">📸 Our Work</a></li>
+                    <li><a href="#reviews" class="nav-link hover:text-gray-300 transition-colors duration-200" data-target="reviews">⭐ Reviews</a></li>
+                    <li><a href="#blog" class="nav-link hover:text-gray-300 transition-colors duration-200" data-target="blog">📝 Blog</a></li>
+                    <li><a href="#submit-form" class="nav-link hover:text-gray-300 transition-colors duration-200" data-target="submit-form">✉️ Submit a Form</a></li>
                 </ul>
             </nav>
         </div>
@@ -50,34 +52,34 @@
         <section id="home" class="page-section active">
             <div class="max-w-4xl mx-auto">
                 <div class="text-center mb-12 p-6 bg-gray-50 rounded-xl shadow-md border border-gray-200">
-                    <h2 class="text-2xl md:text-3xl font-semibold mb-3">Quick Contact Info:</h2>
+                    <h2 class="text-2xl md:text-3xl font-semibold mb-3">Quick Contact Info 📞</h2>
                     <p class="text-xl md:text-2xl font-medium mb-2">
-                        <a href="tel:734-474-8230" class="text-gray-900 hover:text-gray-700 transition-colors duration-200">734-474-8230</a>
+                        <a href="tel:734-474-8230" class="text-black hover:text-gray-700 transition-colors duration-200">📱 734-474-8230</a>
                     </p>
                     <p class="text-xl md:text-2xl font-medium">
-                        <a href="mailto:paulsweeding@gmail.com" class="text-gray-900 hover:text-gray-700 transition-colors duration-200">paulsweeding@gmail.com</a>
+                        <a href="mailto:paulsweeding@gmail.com" class="text-black hover:text-gray-700 transition-colors duration-200">✉️ paulsweeding@gmail.com</a>
                     </p>
                 </div>
 
                 <div class="mb-12">
-                    <h2 class="text-3xl md:text-4xl font-bold text-center mb-8">Services We Provide: 🌱</h2>
-                    <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-lg list-disc list-inside px-4">
-                        <li class="p-2 bg-gray-50 rounded-md border border-gray-200">Hand-Weeding</li>
-                        <li class="p-2 bg-gray-50 rounded-md border border-gray-200">Mulching</li>
-                        <li class="p-2 bg-gray-50 rounded-md border border-gray-200">Trimming</li>
-                        <li class="p-2 bg-gray-50 rounded-md border border-gray-200">Edging</li>
-                        <li class="p-2 bg-gray-50 rounded-md border border-gray-200">Spring Clean-up</li>
-                        <li class="p-2 bg-gray-50 rounded-md border border-gray-200">MAINTENANCE</li>
-                        <li class="p-2 bg-gray-50 rounded-md border border-gray-200">Bush Removal</li>
-                        <li class="p-2 bg-gray-50 rounded-md border border-gray-200">Gardening</li>
-                        <li class="p-2 bg-gray-50 rounded-md border border-gray-200">Planting</li>
-                        <li class="p-2 bg-gray-50 rounded-md border border-gray-200">And many more!</li>
+                    <h2 class="text-3xl md:text-4xl font-bold text-center mb-8">Services We Provide 🌱</h2>
+                    <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-xl list-disc list-inside px-4">
+                        <li class="p-2 bg-gray-50 rounded-md border border-gray-200">🖐️ Hand-Weeding</li>
+                        <li class="p-2 bg-gray-50 rounded-md border border-gray-200">🍂 Mulching</li>
+                        <li class="p-2 bg-gray-50 rounded-md border border-gray-200">✂️ Trimming</li>
+                        <li class="p-2 bg-gray-50 rounded-md border border-gray-200">🔪 Edging</li>
+                        <li class="p-2 bg-gray-50 rounded-md border border-gray-200">🧹 Spring Clean-up</li>
+                        <li class="p-2 bg-gray-50 rounded-md border border-gray-200">🔄 MAINTENANCE</li>
+                        <li class="p-2 bg-gray-50 rounded-md border border-gray-200">🌳 Bush Removal</li>
+                        <li class="p-2 bg-gray-50 rounded-md border border-gray-200">🏡 Gardening</li>
+                        <li class="p-2 bg-gray-50 rounded-md border border-gray-200">🌷 Planting</li>
+                        <li class="p-2 bg-gray-50 rounded-md border border-gray-200">✨ And many more!</li>
                     </ul>
                 </div>
 
                 <div class="mb-12 p-8 bg-gray-50 rounded-xl shadow-lg border border-gray-200">
                     <h2 class="text-3xl md:text-4xl font-bold text-center mb-8">WHY CHOOSE US? ✅</h2>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-lg">
+                    <div class="grid grid-cols-1 gap-6 text-xl">
                         <p class="p-4 bg-white rounded-lg border border-gray-200 shadow-sm">
                             ✅ <span class="font-semibold">Most affordable prices guaranteed.</span> No hidden fees or processing costs.
                         </p>
@@ -96,7 +98,7 @@
                         <p class="p-4 bg-white rounded-lg border border-gray-200 shadow-sm">
                             ✅ <span class="font-semibold">No binding contracts.</span>
                         </p>
-                        <p class="p-4 bg-white rounded-lg border border-gray-200 shadow-sm md:col-span-2">
+                        <p class="p-4 bg-white rounded-lg border border-gray-200 shadow-sm">
                             ✅ You can hire us for <span class="font-semibold">one time</span> or opt to have us provide <span class="font-semibold">weekly, bi-weekly, or monthly service.</span>
                         </p>
                     </div>
@@ -117,171 +119,171 @@
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                     <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
                         <img src="https://i.imgur.com/eOlZyYl.jpeg" alt="Landscaping project example" class="w-full h-48 object-cover">
-                        <div class="p-4 text-sm">Garden bed weeding and cleanup.</div>
+                        <div class="p-4 text-lg">🌿 Garden bed weeding and cleanup.</div>
                     </div>
                     <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
                         <img src="https://i.imgur.com/FV3i5tW.jpeg" alt="Landscaping project example" class="w-full h-48 object-cover">
-                        <div class="p-4 text-sm">Before and after weeding.</div>
+                        <div class="p-4 text-lg">🔄 Before and after weeding.</div>
                     </div>
                     <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
                         <img src="https://i.imgur.com/bz43V1q.jpeg" alt="Landscaping project example" class="w-full h-48 object-cover">
-                        <div class="p-4 text-sm">Clearing overgrown areas.</div>
+                        <div class="p-4 text-lg">✂️ Clearing overgrown areas.</div>
                     </div>
                     <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
                         <img src="https://i.imgur.com/ACi93lj.jpeg" alt="Landscaping project example" class="w-full h-48 object-cover">
-                        <div class="p-4 text-sm">Freshly weeded garden.</div>
+                        <div class="p-4 text-lg">🌱 Freshly weeded garden.</div>
                     </div>
                     <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
                         <img src="https://i.imgur.com/J8ausUo.jpeg" alt="Landscaping project example" class="w-full h-48 object-cover">
-                        <div class="p-4 text-sm">Detailed weeding work.</div>
+                        <div class="p-4 text-lg">🔍 Detailed weeding work.</div>
                     </div>
                     <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
                         <img src="https://i.imgur.com/1O4YaOg.jpeg" alt="Landscaping project example" class="w-full h-48 object-cover">
-                        <div class="p-4 text-sm">A completed project.</div>
+                        <div class="p-4 text-lg">✅ A completed project.</div>
                     </div>
                     <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
                         <img src="https://i.imgur.com/9gsDxch.jpeg" alt="Landscaping project example" class="w-full h-48 object-cover">
-                        <div class="p-4 text-sm">Yard transformation.</div>
+                        <div class="p-4 text-lg">🏡 Yard transformation.</div>
                     </div>
                     <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
                         <img src="https://i.imgur.com/5jU7nuo.jpeg" alt="Landscaping project example" class="w-full h-48 object-cover">
-                        <div class="p-4 text-sm">Cleaned and prepared garden bed.</div>
+                        <div class="p-4 text-lg">🧹 Cleaned and prepared garden bed.</div>
                     </div>
                     <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
                         <img src="https://i.imgur.com/TBZ9fru.jpeg" alt="Landscaping project example" class="w-full h-48 object-cover">
-                        <div class="p-4 text-sm">Precise weeding.</div>
+                        <div class="p-4 text-lg">👌 Precise weeding.</div>
                     </div>
                     <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
                         <img src="https://i.imgur.com/FUfOFr9.jpeg" alt="Landscaping project example" class="w-full h-48 object-cover">
-                        <div class="p-4 text-sm">Another successful cleanup.</div>
+                        <div class="p-4 text-lg">✨ Another successful cleanup.</div>
                     </div>
                     <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
                         <img src="https://i.imgur.com/AzHxSaU.jpeg" alt="Landscaping project example" class="w-full h-48 object-cover">
-                        <div class="p-4 text-sm">Garden maintenance.</div>
+                        <div class="p-4 text-lg">🌼 Garden maintenance.</div>
                     </div>
                     <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
                         <img src="https://i.imgur.com/ZYK7dXA.jpeg" alt="Landscaping project example" class="w-full h-48 object-cover">
-                        <div class="p-4 text-sm">Overgrown area cleared.</div>
+                        <div class="p-4 text-lg">🧹 Overgrown area cleared.</div>
                     </div>
                     <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
                         <img src="https://i.imgur.com/vTNwIck.jpeg" alt="Landscaping project example" class="w-full h-48 object-cover">
-                        <div class="p-4 text-sm">Final result of weeding.</div>
+                        <div class="p-4 text-lg">🏆 Final result of weeding.</div>
                     </div>
                     <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
                         <img src="https://i.imgur.com/LBbJAA2.png" alt="Landscaping project example" class="w-full h-48 object-cover">
-                        <div class="p-4 text-sm">Pathway edging and weeding.</div>
+                        <div class="p-4 text-lg">🛤️ Pathway edging and weeding.</div>
                     </div>
                     <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
                         <img src="https://i.imgur.com/NVn6LvW.png" alt="Landscaping project example" class="w-full h-48 object-cover">
-                        <div class="p-4 text-sm">Lawn and garden care.</div>
+                        <div class="p-4 text-lg">🌱 Lawn and garden care.</div>
                     </div>
                     <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
                         <img src="https://i.imgur.com/L2DrbXh.png" alt="Landscaping project example" class="w-full h-48 object-cover">
-                        <div class="p-4 text-sm">Beautifully maintained garden.</div>
+                        <div class="p-4 text-lg">💐 Beautifully maintained garden.</div>
                     </div>
                     <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
                         <img src="https://i.imgur.com/vTRJ1T8.png" alt="Landscaping project example" class="w-full h-48 object-cover">
-                        <div class="p-4 text-sm">Tidy and weed-free.</div>
+                        <div class="p-4 text-lg">🧼 Tidy and weed-free.</div>
                     </div>
                     <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
                         <img src="https://i.imgur.com/JXV9ljM.png" alt="Landscaping project example" class="w-full h-48 object-cover">
-                        <div class="p-4 text-sm">Large area cleanup.</div>
+                        <div class="p-4 text-lg">🌿 Large area cleanup.</div>
                     </div>
                     <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
                         <img src="https://i.imgur.com/oZSQZQr.png" alt="Landscaping project example" class="w-full h-48 object-cover">
-                        <div class="p-4 text-sm">Garden bed after service.</div>
+                        <div class="p-4 text-lg">🪴 Garden bed after service.</div>
                     </div>
                     <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
                         <img src="https://i.imgur.com/J9JFHNQ.jpeg" alt="Landscaping project example" class="w-full h-48 object-cover">
-                        <div class="p-4 text-sm">Clean edges and surfaces.</div>
+                        <div class="p-4 text-lg">✂️ Clean edges and surfaces.</div>
                     </div>
                     <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
                         <img src="https://i.imgur.com/IAUdEn3.png" alt="Landscaping project example" class="w-full h-48 object-cover">
-                        <div class="p-4 text-sm">Results of our hard work.</div>
+                        <div class="p-4 text-lg">🏆 Results of our hard work.</div>
                     </div>
                     <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
                         <img src="https://i.imgur.com/5IE8aAk.jpeg" alt="Landscaping project example" class="w-full h-48 object-cover">
-                        <div class="p-4 text-sm">Impeccable weeding service.</div>
+                        <div class="p-4 text-lg">👌 Impeccable weeding service.</div>
                     </div>
                     <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
                         <img src="https://i.imgur.com/37mcEct.jpeg" alt="Landscaping project example" class="w-full h-48 object-cover">
-                        <div class="p-4 text-sm">Happy plants, no weeds.</div>
+                        <div class="p-4 text-lg">😊 Happy plants, no weeds.</div>
                     </div>
                     <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
                         <img src="https://i.imgur.com/w9WAhXM.jpeg" alt="Landscaping project example" class="w-full h-48 object-cover">
-                        <div class="p-4 text-sm">Our work in progress.</div>
+                        <div class="p-4 text-lg">👷 Our work in progress.</div>
                     </div>
                     <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
                         <img src="https://i.imgur.com/6WCMzIX.png" alt="Landscaping project example" class="w-full h-48 object-cover">
-                        <div class="p-4 text-sm">Attention to detail.</div>
+                        <div class="p-4 text-lg">🔍 Attention to detail.</div>
                     </div>
                     <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
                         <img src="https://i.imgur.com/xDOag9e.png" alt="Landscaping project example" class="w-full h-48 object-cover">
-                        <div class="p-4 text-sm">Landscaping excellence.</div>
+                        <div class="p-4 text-lg">🏆 Landscaping excellence.</div>
                     </div>
                     <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
                         <img src="https://i.imgur.com/Y0eK9hF.png" alt="Landscaping project example" class="w-full h-48 object-cover">
-                        <div class="p-4 text-sm">Fresh and clean garden.</div>
+                        <div class="p-4 text-lg">🌿 Fresh and clean garden.</div>
                     </div>
                     <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
                         <img src="https://i.imgur.com/Xo1lyeM.png" alt="Landscaping project example" class="w-full h-48 object-cover">
-                        <div class="p-4 text-sm">Weeding around delicate plants.</div>
+                        <div class="p-4 text-lg">🌱 Weeding around delicate plants.</div>
                     </div>
                     <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
                         <img src="https://i.imgur.com/LGcgpjk.png" alt="Landscaping project example" class="w-full h-48 object-cover">
-                        <div class="p-4 text-sm">Professional results.</div>
+                        <div class="p-4 text-lg">👔 Professional results.</div>
                     </div>
                     <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
                         <img src="https://i.imgur.com/eVIXVyP.png" alt="Landscaping project example" class="w-full h-48 object-cover">
-                        <div class="p-4 text-sm">Another job well done.</div>
+                        <div class="p-4 text-lg">👍 Another job well done.</div>
                     </div>
                     <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
                         <img src="https://i.imgur.com/NZewfto.jpeg" alt="Landscaping project example" class="w-full h-48 object-cover">
-                        <div class="p-4 text-sm">Garden bed restoration.</div>
+                        <div class="p-4 text-lg">🔄 Garden bed restoration.</div>
                     </div>
                     <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
                         <img src="https://i.imgur.com/ZoDE3hM.png" alt="Landscaping project example" class="w-full h-48 object-cover">
-                        <div class="p-4 text-sm">Expert weeding services.</div>
+                        <div class="p-4 text-lg">👨‍🌾 Expert weeding services.</div>
                     </div>
                     <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
                         <img src="https://i.imgur.com/QdZJxd7.png" alt="Landscaping project example" class="w-full h-48 object-cover">
-                        <div class="p-4 text-sm">Before and after our service.</div>
+                        <div class="p-4 text-lg">🔄 Before and after our service.</div>
                     </div>
                     <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
                         <img src="https://i.imgur.com/AL7VG7F.jpeg" alt="Landscaping project example" class="w-full h-48 object-cover">
-                        <div class="p-4 text-sm">Clear and tidy results.</div>
+                        <div class="p-4 text-lg">🧹 Clear and tidy results.</div>
                     </div>
                     <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
                         <img src="https://i.imgur.com/qI8qnE2.jpeg" alt="Landscaping project example" class="w-full h-48 object-cover">
-                        <div class="p-4 text-sm">Weeding around structures.</div>
+                        <div class="p-4 text-lg">🏠 Weeding around structures.</div>
                     </div>
                     <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
                         <img src="https://i.imgur.com/oul6Iyv.jpeg" alt="Landscaping project example" class="w-full h-48 object-cover">
-                        <div class="p-4 text-sm">Cleaned up and beautiful.</div>
+                        <div class="p-4 text-lg">✨ Cleaned up and beautiful.</div>
                     </div>
                     <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
                         <img src="https://i.imgur.com/uCoATW5.jpeg" alt="Landscaping project example" class="w-full h-48 object-cover">
-                        <div class="p-4 text-sm">From overgrown to immaculate.</div>
+                        <div class="p-4 text-lg">🌿 From overgrown to immaculate.</div>
                     </div>
                     <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
                         <img src="https://i.imgur.com/XBXMVzf.jpeg" alt="Landscaping project example" class="w-full h-48 object-cover">
-                        <div class="p-4 text-sm">Our team's quality work.</div>
+                        <div class="p-4 text-lg">👨‍👩‍👧‍👦 Our team's quality work.</div>
                     </div>
                     <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
                         <img src="https://i.imgur.com/saOAkci.jpeg" alt="Landscaping project example" class="w-full h-48 object-cover">
-                        <div class="p-4 text-sm">A satisfied customer's yard.</div>
+                        <div class="p-4 text-lg">😊 A satisfied customer's yard.</div>
                     </div>
                     <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
                         <img src="https://i.imgur.com/5N2lGeo.jpeg" alt="Landscaping project example" class="w-full h-48 object-cover">
-                        <div class="p-4 text-sm">Large scale weeding.</div>
+                        <div class="p-4 text-lg">🌿 Large scale weeding.</div>
                     </div>
                     <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
                         <img src="https://i.imgur.com/h127h3W.jpeg" alt="Landscaping project example" class="w-full h-48 object-cover">
-                        <div class="p-4 text-sm">Maintaining curb appeal.</div>
+                        <div class="p-4 text-lg">🏡 Maintaining curb appeal.</div>
                     </div>
                     <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
                         <img src="https://i.imgur.com/wpJZl34.jpeg" alt="Landscaping project example" class="w-full h-48 object-cover">
-                        <div class="p-4 text-sm">Finished weeding project.</div>
+                        <div class="p-4 text-lg">✅ Finished weeding project.</div>
                     </div>
                 </div>
             </div>
@@ -292,28 +294,28 @@
                 <h2 class="text-4xl font-bold mb-10 text-center">Customer Reviews ⭐</h2>
                 <p class="text-center text-xl mb-8">
                     CHECK OUT OUR REVIEWS ON
-                    <a href="https://bit.ly/32Ggy5z" target="_blank" class="text-gray-900 hover:underline font-semibold">THUMBTACK 👍</a>,
-                    <a href="https://www.yelp.com/biz/pauls-professional-weeding-service-ann-arbor" target="_blank" class="text-gray-900 hover:underline font-semibold">YELP 🌟</a>, AND
-                    <a href="https://bit.ly/2GtFeVU" target="_blank" class="text-gray-900 hover:underline font-semibold">GOOGLE 🌐</a>.
+                    <a href="https://bit.ly/32Ggy5z" target="_blank" class="text-black hover:underline font-semibold">THUMBTACK 👍</a>,
+                    <a href="https://www.yelp.com/biz/pauls-professional-weeding-service-ann-arbor" target="_blank" class="text-black hover:underline font-semibold">YELP 🌟</a>, AND
+                    <a href="https://bit.ly/2GtFeVU" target="_blank" class="text-black hover:underline font-semibold">GOOGLE 🌐</a>.
                 </p>
                 <div class="grid grid-cols-1 md:grid-cols-1 gap-8">
                     <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 p-6">
-                        <p class="text-lg italic mb-4">"Paul and the team have been great. Everything was done when and for how much we had discussed, and my yard looks awesome. They did a large landscaping job for me and have continued to come out bi-weekly for maintenance and mowing. I wish I’d found them sooner. So impressed!"</p>
+                        <p class="text-xl italic mb-4">"Paul and the team have been great. Everything was done when and for how much we had discussed, and my yard looks awesome. They did a large landscaping job for me and have continued to come out bi-weekly for maintenance and mowing. I wish I'd found them sooner. So impressed!"</p>
                         <p class="text-right font-semibold">- Wendy D. ~ Thumbtack, 5 stars</p>
                         <p class="text-right text-sm text-gray-600">⭐⭐⭐⭐⭐</p>
                     </div>
                     <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 p-6">
-                        <p class="text-lg italic mb-4">"Paul and his team are extremely professional and did a great job weeding and mulching our beds. They did it quickly, beds look great and we couldn't be happier."</p>
+                        <p class="text-xl italic mb-4">"Paul and his team are extremely professional and did a great job weeding and mulching our beds. They did it quickly, beds look great and we couldn't be happier."</p>
                         <p class="text-right font-semibold">- Gregory A. ~ Yelp, 5 stars</p>
                         <p class="text-right text-sm text-gray-600">⭐⭐⭐⭐⭐</p>
                     </div>
                     <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 p-6">
-                        <p class="text-lg italic mb-4">"I feel very lucky that I found such an outstanding landscaping company. They were always on time and they always immediately got to work without hesitation. They were extremely careful, making sure that my plants did not get damaged, while making sure they got all of the weeds in my bed. They always worked with me and my many suggestions to help ensure my experience was outstanding. They were affordable and I was astounded at the impeccable work that they performed in my yard. If you want someone hardworking, proficient, and trustworthy, then these are the guys for you!"</p>
+                        <p class="text-xl italic mb-4">"I feel very lucky that I found such an outstanding landscaping company. They were always on time and they always immediately got to work without hesitation. They were extremely careful, making sure that my plants did not get damaged, while making sure they got all of the weeds in my bed. They always worked with me and my many suggestions to help ensure my experience was outstanding. They were affordable and I was astounded at the impeccable work that they performed in my yard. If you want someone hardworking, proficient, and trustworthy, then these are the guys for you!"</p>
                         <p class="text-right font-semibold">- Ron G. ~ Yelp, 5 stars</p>
                         <p class="text-right text-sm text-gray-600">⭐⭐⭐⭐⭐</p>
                     </div>
                     <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 p-6">
-                        <p class="text-lg italic mb-4">"I don't curse a lot, but the string of words out of my mouth when I saw your work on our asparagus beds was quite colorful. Just an amazing job. Working around the stalks instead of snapping them like I suggested had a staggering effect; and of course it is what reseeds the bed so thank you! Of course I was kidding about maintaining the front bed being part of the service; we were trying to commit to keep it clean and were failing. It was really appreciated, can I send you more for that?"</p>
+                        <p class="text-xl italic mb-4">"I don't curse a lot, but the string of words out of my mouth when I saw your work on our asparagus beds was quite colorful. Just an amazing job. Working around the stalks instead of snapping them like I suggested had a staggering effect; and of course it is what reseeds the bed so thank you! Of course I was kidding about maintaining the front bed being part of the service; we were trying to commit to keep it clean and were failing. It was really appreciated, can I send you more for that?"</p>
                         <p class="text-right font-semibold">- Robert Z. (Continual Client)</p>
                         <p class="text-right text-sm text-gray-600">⭐⭐⭐⭐⭐</p>
                     </div>
@@ -324,27 +326,27 @@
         <section id="blog" class="page-section">
             <div class="max-w-4xl mx-auto py-8">
                 <h2 class="text-4xl font-bold mb-10 text-center">Our Blog 📝</h2>
-                <p class="text-center text-lg mb-8 text-gray-700">
+                <p class="text-center text-xl mb-8 text-gray-700">
                     Welcome to our blog! The content here is generated with the help of artificial intelligence to bring you insightful articles on landscaping and gardening.
                 </p>
                 <div class="grid grid-cols-1 gap-8">
                     <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 p-6">
                         <h3 class="text-2xl font-semibold mb-3">The Unseen Benefits of Hand-Weeding for a Healthier Garden 🌱</h3>
-                        <p class="text-sm text-gray-600 mb-4">Published: July 9, 2025</p>
+                        <p class="text-lg text-gray-600 mb-4">Published: July 9, 2025</p>
                         <p class="text-gray-700 mb-4">
                             While many modern landscaping techniques prioritize speed and efficiency, the timeless practice of hand-weeding offers unparalleled benefits for the health and longevity of your garden. Unlike chemical herbicides that can harm beneficial insects and soil microbes, or mechanical weeding that might damage delicate root systems, hand-weeding allows for precise removal of unwanted plants without collateral damage.
                         </p>
                         <p class="text-gray-700 mb-4">
                             This meticulous approach ensures that only weeds are targeted, preserving the integrity of your cultivated plants and the surrounding ecosystem. Furthermore, hand-weeding provides an opportunity for close inspection of your garden, allowing you to spot early signs of pests, diseases, or nutrient deficiencies that might otherwise go unnoticed. It's an investment in the long-term vitality and beauty of your landscape, fostering a truly thriving environment.
                         </p>
-                        <a href="#" class="text-gray-900 font-medium hover:underline">Read More</a>
+                        <a href="#" class="text-black font-medium hover:underline">📖 Read More</a>
                     </div>
 
                     <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 p-6 text-center text-gray-500 italic">
-                        <h3 class="text-xl font-semibold mb-2">More insightful articles coming soon!</h3>
-                        <p>Stay tuned for tips on mulching, trimming, seasonal clean-ups, and more.</p>
+                        <h3 class="text-2xl font-semibold mb-2">More insightful articles coming soon! ✨</h3>
+                        <p class="text-lg">Stay tuned for tips on mulching, trimming, seasonal clean-ups, and more.</p>
                     </div>
-                    </div>
+                </div>
             </div>
         </section>
 
@@ -354,81 +356,81 @@
                 <form class="space-y-6">
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div>
-                            <label for="first-name" class="block text-lg font-medium text-gray-700 mb-2">Name (First)</label>
-                            <input type="text" id="first-name" name="first-name" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-gray-500 focus:border-gray-500 sm:text-base" placeholder="John">
+                            <label for="first-name" class="block text-xl font-medium text-gray-700 mb-2">Name (First)</label>
+                            <input type="text" id="first-name" name="first-name" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-gray-500 focus:border-gray-500 text-lg" placeholder="John">
                         </div>
                         <div>
-                            <label for="last-name" class="block text-lg font-medium text-gray-700 mb-2">Name (Last)</label>
-                            <input type="text" id="last-name" name="last-name" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-gray-500 focus:border-gray-500 sm:text-base" placeholder="Doe">
+                            <label for="last-name" class="block text-xl font-medium text-gray-700 mb-2">Name (Last)</label>
+                            <input type="text" id="last-name" name="last-name" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-gray-500 focus:border-gray-500 text-lg" placeholder="Doe">
                         </div>
                     </div>
                     <div>
-                        <label for="email" class="block text-lg font-medium text-gray-700 mb-2">Email Address</label>
-                        <input type="email" id="email" name="email" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-gray-500 focus:border-gray-500 sm:text-base" placeholder="you@example.com">
+                        <label for="email" class="block text-xl font-medium text-gray-700 mb-2">📧 Email Address</label>
+                        <input type="email" id="email" name="email" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-gray-500 focus:border-gray-500 text-lg" placeholder="you@example.com">
                     </div>
                     <div>
-                        <label for="phone" class="block text-lg font-medium text-gray-700 mb-2">Phone Number</label>
-                        <input type="tel" id="phone" name="phone" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-gray-500 focus:border-gray-500 sm:text-base" placeholder="734-555-1234">
+                        <label for="phone" class="block text-xl font-medium text-gray-700 mb-2">📱 Phone Number</label>
+                        <input type="tel" id="phone" name="phone" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-gray-500 focus:border-gray-500 text-lg" placeholder="734-555-1234">
                     </div>
                     <div class="grid grid-cols-1 gap-4">
                         <div>
-                            <label for="street-address" class="block text-lg font-medium text-gray-700 mb-2">Street Address</label>
-                            <input type="text" id="street-address" name="street-address" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-gray-500 focus:border-gray-500 sm:text-base" placeholder="123 Main St">
+                            <label for="street-address" class="block text-xl font-medium text-gray-700 mb-2">🏠 Street Address</label>
+                            <input type="text" id="street-address" name="street-address" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-gray-500 focus:border-gray-500 text-lg" placeholder="123 Main St">
                         </div>
                         <div>
-                            <label for="street-address-2" class="block text-lg font-medium text-gray-700 mb-2">Street Address 2 (Optional)</label>
-                            <input type="text" id="street-address-2" name="street-address-2" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-gray-500 focus:border-gray-500 sm:text-base" placeholder="Apt, Suite, Bldg">
-                        </div>
-                    </div>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <div>
-                            <label for="city" class="block text-lg font-medium text-gray-700 mb-2">City</label>
-                            <input type="text" id="city" name="city" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-gray-500 focus:border-gray-500 sm:text-base" placeholder="Ann Arbor">
-                        </div>
-                        <div>
-                            <label for="state-region" class="block text-lg font-medium text-gray-700 mb-2">State / Region</label>
-                            <input type="text" id="state-region" name="state-region" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-gray-500 focus:border-gray-500 sm:text-base" placeholder="MI">
+                            <label for="street-address-2" class="block text-xl font-medium text-gray-700 mb-2">🏠 Street Address 2 (Optional)</label>
+                            <input type="text" id="street-address-2" name="street-address-2" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-gray-500 focus:border-gray-500 text-lg" placeholder="Apt, Suite, Bldg">
                         </div>
                     </div>
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div>
-                            <label for="zip-code" class="block text-lg font-medium text-gray-700 mb-2">Zip Code</label>
-                            <input type="text" id="zip-code" name="zip-code" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-gray-500 focus:border-gray-500 sm:text-base" placeholder="48103">
+                            <label for="city" class="block text-xl font-medium text-gray-700 mb-2">🏙️ City</label>
+                            <input type="text" id="city" name="city" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-gray-500 focus:border-gray-500 text-lg" placeholder="Ann Arbor">
                         </div>
                         <div>
-                            <label for="country" class="block text-lg font-medium text-gray-700 mb-2">Country</label>
-                            <select id="country" name="country" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-gray-500 focus:border-gray-500 sm:text-base">
+                            <label for="state-region" class="block text-xl font-medium text-gray-700 mb-2">🗺️ State / Region</label>
+                            <input type="text" id="state-region" name="state-region" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-gray-500 focus:border-gray-500 text-lg" placeholder="MI">
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label for="zip-code" class="block text-xl font-medium text-gray-700 mb-2">📮 Zip Code</label>
+                            <input type="text" id="zip-code" name="zip-code" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-gray-500 focus:border-gray-500 text-lg" placeholder="48103">
+                        </div>
+                        <div>
+                            <label for="country" class="block text-xl font-medium text-gray-700 mb-2">🌎 Country</label>
+                            <select id="country" name="country" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-gray-500 focus:border-gray-500 text-lg">
                                 <option>United States</option>
-                                </select>
+                            </select>
                         </div>
                     </div>
 
                     <div>
-                        <label class="block text-lg font-medium text-gray-700 mb-2">What are you looking for?</label>
+                        <label class="block text-xl font-medium text-gray-700 mb-2">What are you looking for? 🤔</label>
                         <div class="mt-2 space-y-2">
                             <div class="flex items-center">
-                                <input id="job-type-one-time" name="job-type" type="radio" class="focus:ring-gray-500 h-4 w-4 text-gray-900 border-gray-300" value="one-time">
-                                <label for="job-type-one-time" class="ml-3 block text-base text-gray-700">One Time Job</label>
+                                <input id="job-type-one-time" name="job-type" type="radio" class="focus:ring-gray-500 h-4 w-4 text-gray-900 border-gray-300">
+                                <label for="job-type-one-time" class="ml-3 block text-lg text-gray-700">One Time Job</label>
                             </div>
                             <div class="flex items-center">
-                                <input id="job-type-continual" name="job-type" type="radio" class="focus:ring-gray-500 h-4 w-4 text-gray-900 border-gray-300" value="continual">
-                                <label for="job-type-continual" class="ml-3 block text-base text-gray-700">Continual Service</label>
+                                <input id="job-type-continual" name="job-type" type="radio" class="focus:ring-gray-500 h-4 w-4 text-gray-900 border-gray-300">
+                                <label for="job-type-continual" class="ml-3 block text-lg text-gray-700">Continual Service</label>
                             </div>
                             <div class="flex items-center">
-                                <input id="job-type-unknown" name="job-type" type="radio" class="focus:ring-gray-500 h-4 w-4 text-gray-900 border-gray-300" value="unknown">
-                                <label for="job-type-unknown" class="ml-3 block text-base text-gray-700">I don't know</label>
+                                <input id="job-type-unknown" name="job-type" type="radio" class="focus:ring-gray-500 h-4 w-4 text-gray-900 border-gray-300">
+                                <label for="job-type-unknown" class="ml-3 block text-lg text-gray-700">I don't know</label>
                             </div>
                         </div>
                     </div>
 
                     <div>
-                        <label for="job-description" class="block text-lg font-medium text-gray-700 mb-2">Give a rough description of the job and also what day and time you would like to schedule an estimate. We will work with your schedule so simply pick the most convenient time for yourself.</label>
-                        <textarea id="job-description" name="job-description" rows="6" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-gray-500 focus:border-gray-500 sm:text-base" placeholder="Describe your project and preferred estimate times..."></textarea>
+                        <label for="job-description" class="block text-xl font-medium text-gray-700 mb-2">✍️ Give a rough description of the job and also what day and time you would like to schedule an estimate. We will work with your schedule so simply pick the most convenient time for yourself.</label>
+                        <textarea id="job-description" name="job-description" rows="6" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-gray-500 focus:border-gray-500 text-lg" placeholder="Describe your project and preferred estimate times..."></textarea>
                     </div>
 
                     <div class="text-center">
-                        <button type="submit" class="inline-flex justify-center py-3 px-8 border border-transparent shadow-sm text-lg font-medium rounded-md text-white bg-gray-900 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 transition-colors duration-200">
-                            Submit Request
+                        <button type="submit" class="inline-flex justify-center py-3 px-8 border border-transparent shadow-sm text-xl font-medium rounded-md text-white bg-black hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 transition-colors duration-200">
+                            📤 Submit Request
                         </button>
                     </div>
                 </form>
